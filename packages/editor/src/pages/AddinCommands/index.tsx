@@ -7,11 +7,7 @@ import { hideSplashScreen } from 'common/lib/utilities/splash.screen';
 import setup from './setup';
 
 const AddinCommands = () => (
-  <AwaitPromiseThenRender
-    promise={Promise.resolve()
-      .then(() => Office.onReady())
-      .then(() => hideSplashScreen())}
-  >
+  <AwaitPromiseThenRender promise={Promise.resolve().then(() => hideSplashScreen())}>
     <RunOnLoad funcToRun={setup} />
   </AwaitPromiseThenRender>
 );

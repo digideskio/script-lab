@@ -10,11 +10,7 @@ import { hideSplashScreen } from 'common/lib/utilities/splash.screen';
 const CFD = App(CustomFunctionsDashboard);
 
 const CustomFunctions = () => (
-  <AwaitPromiseThenRender
-    promise={Promise.resolve()
-      .then(() => Office.onReady())
-      .then(() => hideSplashScreen())}
-  >
+  <AwaitPromiseThenRender promise={Promise.resolve().then(() => hideSplashScreen())}>
     <Theme host={Utilities.host}>
       <CFD />
     </Theme>

@@ -19,6 +19,8 @@ import Pages from './pages';
   const isRedirectingAway = await isRedirectingAwayPromise;
   if (!isRedirectingAway) {
     try {
+      await Office.onReady();
+
       if (Authenticator.isAuthDialog()) {
         return;
       }
